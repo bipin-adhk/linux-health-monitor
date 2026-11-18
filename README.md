@@ -1,4 +1,5 @@
 Linux Health Monitor
+
 A hands-on observability lab built with Python Flask, Docker Compose, Prometheus, and Grafana. The project demonstrates how to monitor an application's availability, detect an outage, notify an operator by email, and verify recovery.
 What this project does
 - Runs a lightweight Flask health-monitoring application in Docker.
