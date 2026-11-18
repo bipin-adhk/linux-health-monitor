@@ -1,7 +1,18 @@
-.venv/
-__pycache__/
-*.pyc
+# Secrets
 .env
 .env.*
 !.env.example
+*.pem
+*.key
 
+# Local backups
+compose.yaml.backup
+*.bak
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local files
+.DS_Store
