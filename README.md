@@ -160,7 +160,7 @@ The RAM and disk alert rules were configured and observed in their Normal states
 Clone the repository and enter the project directory.
 
 ```bash
-git clone <your-repository-url>
+git clone <https://github.com/bipin-adhk/linux-health-monitor>
 cd linux-health-monitor
 ```
 
