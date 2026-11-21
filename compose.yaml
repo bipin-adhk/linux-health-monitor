@@ -18,8 +18,8 @@ services:
     restart: unless-stopped
     depends_on:
       - health-monitor
-
-  grafana:
+      
+grafana:
     image: grafana/grafana:latest
     container_name: grafana
     ports:
@@ -38,6 +38,18 @@ services:
       GF_SMTP_FROM_NAME: "Linux Health Monitor"
       GF_SMTP_STARTTLS_POLICY: "MandatoryStartTLS"
 
+node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--path.rootfs=/host/root'
+    volumes:
+      - '/proc:/host/proc:ro'
+      - '/sys:/host/sys:ro'
+      - '/:/host/root:ro,rslave'
+    restart: unless-stopped
 volumes:
   prometheus-data:
   grafana-data:
